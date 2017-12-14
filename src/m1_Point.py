@@ -26,7 +26,6 @@ def main():
 #   Your instructor will help you get started on this exercise.
 ########################################################################
 
-
 class Point(object):
     """ Represents a point in 2-space. """
 
@@ -34,6 +33,7 @@ class Point(object):
         self.x = x
         self.y = y
         self.moves_made = 0
+        self.distance = 0
 
     def __repr__(self):
         return 'Point({}, {})'.format(self.x, self.y)
@@ -50,6 +50,7 @@ class Point(object):
         self.x = self.x + dx
         self.y = self.y + dy
         self.moves_made = self.moves_made + 1
+        self.distance = (dx ** 2 + dy ** 2) ** 0.5
 
     def get_number_of_moves_made(self):
         return self.moves_made
@@ -387,7 +388,7 @@ def run_test_move_to():
         print('Actual for p2:  ', p2)
     """
     # ------------------------------------------------------------------
-    # DONE: 6.  Follow the same instructions as in TODO 3 above,
+    # DONE: 6.  Follow the same instructions as in DONE 3 above,
     #           but for the  move_to  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -477,7 +478,7 @@ def run_test_move_by():
         print('Actual for p2:  ', p2)
     """
     # ------------------------------------------------------------------
-    # DONE: 7.  Follow the same instructions as in TODO 3 above,
+    # DONE: 7.  Follow the same instructions as in DONE 3 above,
     #           but for the  move_by  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -583,7 +584,7 @@ def run_test_get_number_of_moves_made():
         print('Actual for p2 moves made:  ', p2.get_number_of_moves_made())
     """
     # ------------------------------------------------------------------
-    # DONE: 8.  Follow the same instructions as in TODO 3 above,
+    # DONE: 8.  Follow the same instructions as in DONE 3 above,
     #    but for the  get_number_of_moves_made  method specified above.
     # ------------------------------------------------------------------
     print()
