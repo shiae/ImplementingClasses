@@ -135,24 +135,25 @@ def run_test_init():
     print('Testing the   __init__   method of the Point class.')
     print('-----------------------------------------------------------')
 
-p1 = Point(30, 18)
-print()
-print('Expected for p1: 30 18')
-print('Actual for p1:  ', p1.x, p1.y)
+    p1 = Point(30, 18)
+    print()
+    print('Expected for p1: 30 18')
+    print('Actual for p1:  ', p1.x, p1.y)
 
-p2 = Point(100, -40)
-print()
-print('Expected for p2: 100 -40')
-print('Actual for p2:  ', p2.x, p2.y)
-print('Expected for p1: 30 18')
-print('Actual for p1:  ', p1.x, p1.y)
+    p2 = Point(100, -40)
+    print()
+    print('Expected for p2: 100 -40')
+    print('Actual for p2:  ', p2.x, p2.y)
+    print('Expected for p1: 30 18')
+    print('Actual for p1:  ', p1.x, p1.y)
 
-p1.y = 999
-print()
-print('Expected for p1: 30 999')
-print('Actual for p1:  ', p1.x, p1.y)
-print('Expected for p2: 100 -40')
-print('Actual for p2:  ', p2.x, p2.y)
+    p1.y = 999
+    print()
+    print('Expected for p1: 30 999')
+    print('Actual for p1:  ', p1.x, p1.y)
+    print('Expected for p2: 100 -40')
+    print('Actual for p2:  ', p2.x, p2.y)
+
 
 def run_test_repr():
     """
@@ -195,7 +196,7 @@ def run_test_repr():
         print('Actual for p2:  ', p2)
     """
     # ------------------------------------------------------------------
-    # TODO: 4.  Follow the same instructions as in TODO 3 above,
+    # DONE: 4.  Follow the same instructions as in DONE 3 above,
     #           but for the  __repr__  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -203,24 +204,25 @@ def run_test_repr():
     print('Testing the   __repr__   method of the Point class.')
     print('-----------------------------------------------------------')
 
-p1 = Point(30, 18)
-print()
-print('Expected for p1: Point(30, 18)')
-print('Actual for p1:  ', p1)
+    p1 = Point(30, 18)
+    print()
+    print('Expected for p1: Point(30, 18)')
+    print('Actual for p1:  ', p1)
 
-p2 = Point(100, -40)
-print()
-print('Expected for p2: Point(100, -40)')
-print('Actual for p2:  ', p2)
-print('Expected for p1: Point(30, 18)')
-print('Actual for p1:  ', p1)
+    p2 = Point(100, -40)
+    print()
+    print('Expected for p2: Point(100, -40)')
+    print('Actual for p2:  ', p2)
+    print('Expected for p1: Point(30, 18)')
+    print('Actual for p1:  ', p1)
 
-p1.y = 999
-print()
-print('Expected for p1: Point(30, 999)')
-print('Actual for p1:  ', p1)
-print('Expected for p2: Point(100, -40)')
-print('Actual for p2:  ', p2)
+    p1.y = 999
+    print()
+    print('Expected for p1: Point(30, 999)')
+    print('Actual for p1:  ', p1)
+    print('Expected for p2: Point(100, -40)')
+    print('Actual for p2:  ', p2)
+
 
 def run_test_clone():
     """
@@ -274,7 +276,7 @@ def run_test_clone():
         print('Actual for p3:  ', p3)
    """
     # ------------------------------------------------------------------
-    # TODO: 5.  Follow the same instructions as in TODO 3 above,
+    # DONE: 5.  Follow the same instructions as in TODO 3 above,
     #           but for the  clone  method specified above.
     # ------------------------------------------------------------------
     print()
@@ -282,41 +284,41 @@ def run_test_clone():
     print('Testing the   clone   method of the Point class.')
     print('-----------------------------------------------------------')
 
-p1 = Point(10, 8)
-print()
-print('Expected for p1: Point(10, 8)')
-print('Actual for p1:  ', p1)
+    p1 = Point(10, 8)
+    print()
+    print('Expected for p1: Point(10, 8)')
+    print('Actual for p1:  ', p1)
 
-p2 = p1.clone()
-p3 = p2.clone()
-print()
-print('Expected for p1: Point(10, 8)')
-print('Actual for p1:  ', p1)
-print('Expected for p2: Point(10, 8)')
-print('Actual for p2:  ', p2)
-print('Expected for p3: Point(10, 8)')
-print('Actual for p3:  ', p3)
+    p2 = p1.clone()
+    p3 = p2.clone()
+    print()
+    print('Expected for p1: Point(10, 8)')
+    print('Actual for p1:  ', p1)
+    print('Expected for p2: Point(10, 8)')
+    print('Actual for p2:  ', p2)
+    print('Expected for p3: Point(10, 8)')
+    print('Actual for p3:  ', p3)
 
-p1.x = 999
-print()
-print('Expected for p1: Point(999, 8)')
-print('Actual for p1:  ', p1)
-print('Expected for p2: Point(10, 8)')
-print('Actual for p2:  ', p2)
-print('Expected for p3: Point(10, 8)')
-print('Actual for p3:  ', p3)
+    p1.x = 999
+    print()
+    print('Expected for p1: Point(999, 8)')
+    print('Actual for p1:  ', p1)
+    print('Expected for p2: Point(10, 8)')
+    print('Actual for p2:  ', p2)
+    print('Expected for p3: Point(10, 8)')
+    print('Actual for p3:  ', p3)
 
-p1.y = 333
-p2 = Point(11, 22)
-p3.x = 777
-p3.y = 555
-print()
-print('Expected for p1: Point(999. 333)')
-print('Actual for p1:  ', p1)
-print('Expected for p2: Point(11, 22)')
-print('Actual for p2:  ', p2)
-print('Expected for p3: Point(777, 555)')
-print('Actual for p3:  ', p3)
+    p1.y = 333
+    p2 = Point(11, 22)
+    p3.x = 777
+    p3.y = 555
+    print()
+    print('Expected for p1: Point(999. 333)')
+    print('Actual for p1:  ', p1)
+    print('Expected for p2: Point(11, 22)')
+    print('Actual for p2:  ', p2)
+    print('Expected for p3: Point(777, 555)')
+    print('Actual for p3:  ', p3)
 
 def run_test_move_to():
     """
