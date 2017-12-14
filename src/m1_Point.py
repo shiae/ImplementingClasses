@@ -45,12 +45,12 @@ class Point(object):
     def move_to(self, x, y):
         self.x = x
         self.y = y
-        self.moves_made = self.moves_made + 1
+        self.moves_made += 1
 
     def move_by(self, dx, dy):
         self.x = self.x + dx
         self.y = self.y + dy
-        self.moves_made = self.moves_made + 1
+        self.moves_made += 1
         self.distance_total = self.distance_total + (dx ** 2 + dy ** 2) ** 0.5
 
     def get_number_of_moves_made(self):
