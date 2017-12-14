@@ -33,7 +33,7 @@ class Point(object):
         self.x = x
         self.y = y
         self.moves_made = 0
-        self.distance = 0
+        self.distance_total = 0
 
     def __repr__(self):
         return 'Point({}, {})'.format(self.x, self.y)
@@ -50,10 +50,19 @@ class Point(object):
         self.x = self.x + dx
         self.y = self.y + dy
         self.moves_made = self.moves_made + 1
-        self.distance = (dx ** 2 + dy ** 2) ** 0.5
+        self.distance_total = self.distance_total + (dx ** 2 + dy ** 2) ** 0.5
 
     def get_number_of_moves_made(self):
         return self.moves_made
+
+    def get_distance_from(self, point):
+        dx = self.x - point.x
+        dy = self.y - point.y
+        resultant = (dx ** 2 + dy ** 2) ** 0.5
+        return resultant
+
+    def get_distance_traveled(self):
+        return self.distance_total
 
 
 # ----------------------------------------------------------------------
