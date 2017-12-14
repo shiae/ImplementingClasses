@@ -26,6 +26,7 @@ def main():
 #   Your instructor will help you get started on this exercise.
 ########################################################################
 
+
 class Point(object):
     """ Represents a point in 2-space. """
 
