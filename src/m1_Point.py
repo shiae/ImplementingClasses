@@ -77,13 +77,13 @@ class Point(object):
     def get_distance_traveled(self):
         return self.traveled
 
-    def closer_to(self, point1, point2):
-        dist_1 = ((point1.x - self.x) ** 2 + (point1.y - self.y) ** 2) ** 0.5
-        dist_2 = ((point2.x - self.x) ** 2 + (point2.y - self.y) ** 2) ** 0.5
-        if dist_1 < dist_2:
-            return point1
+    def closer_to(self, p2, p3):
+        dist_2 = ((p2.x - self.x) ** 2 + (p2.y - self.y) ** 2) ** 0.5
+        dist_3 = ((p3.x - self.x) ** 2 + (p3.y - self.y) ** 2) ** 0.5
+        if dist_2 <= dist_3:
+            return p2
         else:
-            return point2
+            return p3
 
 # ----------------------------------------------------------------------
 # DONE: 2. With your instructor, READ THE INSTRUCTIONS
@@ -993,7 +993,7 @@ def run_test_closer_to():
         print('Actual:  ', p1.closer_to(p4, p5) is p5)
     """
     # ------------------------------------------------------------------
-    # TODO: 12.  Follow the same instructions as in TODO 3 above,
+    # DONE: 12.  Follow the same instructions as in TODO 3 above,
     #    but for the  closer_to  method specified above.
     # ------------------------------------------------------------------
     print()
