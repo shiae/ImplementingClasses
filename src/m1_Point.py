@@ -85,6 +85,12 @@ class Point(object):
         else:
             return p3
 
+    def halfway_to(self, p2):
+        x = (self.x + p2.x) / 2
+        y = (self.y + p2.y) / 2
+        new_point = Point(x, y)
+        return new_point
+
 # ----------------------------------------------------------------------
 # DONE: 2. With your instructor, READ THE INSTRUCTIONS
 #   in file  m0_INSTRUCTIONS.txt, asking questions as needed.
@@ -1029,6 +1035,7 @@ def run_test_closer_to():
     print('Expected: False')
     print('Actual:  ', p1.closer_to(p4, p5) is p5)
 
+
 def run_test_halfway_to():
     """
     Tests the   halfway_to   method of the Point class.
@@ -1076,7 +1083,7 @@ def run_test_halfway_to():
 
     """
     # ------------------------------------------------------------------
-    # TODO: 13.  Follow the same instructions as in TODO 3 above,
+    # DONE: 13.  Follow the same instructions as in DONE 3 above,
     #    but for the  halfway_to  method specified above.
     # ------------------------------------------------------------------
     print()
